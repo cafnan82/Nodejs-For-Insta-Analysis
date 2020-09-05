@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="ui.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>user details</title>
+  </head>
+  <body>
+    <div class="form">
+      <img src="avatar.png" class="avatar" />
+      <h1>INSTAGRAM</h1>
+      <form action="/getdetails" method="POST">
+        <p>Username</p>
+        <input
+          id="inp"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+        />
+        <input id="sub" type="submit" id="submit" />
+      </form>
+    </div>
+    <script type="text/javascript">
+      var image = new Array("p1.jpg", "p2.jpg", "p3.jpg");
+      var i = 0;
+      function bgimage() {
+        document.body.style.backgroundImage = "url('" + image[i] + "')";
+        i++;
+        if (i > image.length - 1) {
+          i = 0;
+        }
+        window.setTimeout("bgimage()", 5000);
+      }
+      window.onload = bgimage();
+    </script>
+  </body>
+</html>
